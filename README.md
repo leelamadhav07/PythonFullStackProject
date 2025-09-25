@@ -28,7 +28,7 @@ ONLINECLIPBOARD/
     |
     |---requirements.txt#Python Dependencies
     |
-    |---README.md       #Project Dcumentation
+    |---README.md       #Project Documentation
     |
     |---.env            #Python Variables
 
