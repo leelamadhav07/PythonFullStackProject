@@ -1,17 +1,13 @@
-import os
-import sys
-
-# Add src folder to Python path so we can import logic and db
+import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from logic import ClipBoardService  # now Python finds src/logic.py
+from logic import ClipBoardService
 
-app = FastAPI(title="Online Clipboard API", version="1.0")
+app = FastAPI(title="Online Clipboard API", version="2.0")
 
-# Allow CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -20,33 +16,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize service
 service = ClipBoardService()
-
-# Request Models
-class UserCreate(BaseModel):
-    username: str
-    email: str
 
 class ClipCreate(BaseModel):
     clip_id: str
-    user_id: int
     content: str
-
-# API Endpoints
-@app.post("/users/")
-def add_user(user: UserCreate):
-    try:
-        result = service.create_user(user.username, user.email)
-        return {"message": "User added successfully", "user": result}
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
 
 @app.post("/clips/")
 def add_clip(clip: ClipCreate):
     try:
-        result = service.create_clip(clip.clip_id, clip.user_id, clip.content)
-        return {"message": "Clip added successfully", "clip": result}
+        result = service.create_clip(clip.clip_id, clip.content)
+        return {"message": "✅ Clip added successfully", "clip": result}
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
