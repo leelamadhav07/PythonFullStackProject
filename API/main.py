@@ -39,4 +39,4 @@ def get_clip(clip_id: str):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("API.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("API.main:app", host="0.0.0.0", port=8000)
