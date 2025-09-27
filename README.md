@@ -13,7 +13,7 @@ The Online Clipboard Sharing Tool is a full-stack web application that allows us
 -**Responsive UI**: Clean, mobile-friendly interface styled with CSS.
 
 ## Project Structure
-
+```
 ONLINECLIPBOARD/
     |
     |---src/            #Core Application Logic
@@ -31,7 +31,7 @@ ONLINECLIPBOARD/
     |---README.md       #Project Documentation
     |
     |---.env            #Python Variables
-
+```
 ##Quick Start
 
 
