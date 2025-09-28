@@ -1,6 +1,6 @@
-### Online Clip Board
+## Online Clip Board
 
-## Description:
+### Description:
 The Online Clipboard Sharing Tool is a full-stack web application that allows users to paste text content, generate a unique ID (e.g., abc123), and share it via a URL (e.g., http://your-app.com/clip/abc123). Users can retrieve the content by entering the ID or visiting the URL. Clips expire after 24 hours for privacy, making it a secure and temporary solution for sharing text across devices.This project demonstrates full-stack development skills, including backend API design, database management with Supabase, and a responsive frontend. It’s ideal for showcasing proficiency in modern web technologies and secure data handling.
 
 ## Features:
