@@ -43,14 +43,14 @@ ONLINECLIPBOARD/
 
 ### 1. Clone or Download the Project
 
-# Option 1: Clone with Git
+#### Option 1: Clone with Git
 git Clone <repository-url>
 
-# Option 2: Download and extract the ZIP file
+#### Option 2: Download and extract the ZIP file
 
 ### 2. Install Dependencies
 
-# Install all required python packages
+#### Install all required python packages
 pip install -r requirements.txt
 
 ### 3. Set Up Supabase Database
