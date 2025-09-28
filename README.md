@@ -3,7 +3,7 @@
 ### Description:
 The Online Clipboard Sharing Tool is a full-stack web application that allows users to paste text content, generate a unique ID (e.g., abc123), and share it via a URL (e.g., http://your-app.com/clip/abc123). Users can retrieve the content by entering the ID or visiting the URL. Clips expire after 24 hours for privacy, making it a secure and temporary solution for sharing text across devices.This project demonstrates full-stack development skills, including backend API design, database management with Supabase, and a responsive frontend. It’s ideal for showcasing proficiency in modern web technologies and secure data handling.
 
-## Features:
+### Features:
 -**Paste Content**: Users can paste text into a form and receive a unique ID and shareable URL.
 
 -**Retrieve Content**: Users can enter the unique ID or visit the URL to view the content.
@@ -12,7 +12,7 @@ The Online Clipboard Sharing Tool is a full-stack web application that allows us
 
 -**Responsive UI**: Clean, mobile-friendly interface styled with CSS.
 
-## Project Structure
+### Project Structure
 ```
 ONLINECLIPBOARD/
     |
@@ -32,7 +32,7 @@ ONLINECLIPBOARD/
     |
     |---.env            #Python Variables
 ```
-##Quick Start
+### Quick Start
 
 
 ### Prerequisites
@@ -59,25 +59,13 @@ pip install -r requirements.txt
 
 2.Create the Table:
 
-```
-CREATE TABLE clips (
-    clip_id SERIAL PRIMARY KEY,           -- Auto ID (internal use)
-    unique_id VARCHAR(20) UNIQUE NOT NULL, -- Public ID (for URL sharing)
-    content TEXT NOT NULL,                -- The pasted text
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- When created
-    expires_at TIMESTAMP NOT NULL         -- When it should expire
-);
-
-
-```
-
-3. **Get you credentials:
+3.Get you credentials:
 
 ### 4. Configure Environment variables
 
 1. Create a '.env' file in the project root
 
-2. Add you supabase credentials to '.env' :
+2. Add your Supabase credentials to '.env' :
 SUPABASE_URL=your_poject_url_here
 SUPABASE_KEY=your_anon_key_here
 
@@ -86,7 +74,7 @@ SUPABASE_KEY=your_anon_key_here
 ## Streamlit Frontend
 Streamlit run frontend/app.py
 
-The app will open in your browser ar `http://localhost:8080`
+The app will open in your browser at `http://localhost:8080`
 
 ## FastAPI Backend
 
@@ -95,7 +83,7 @@ python main.py
 
 The API will be available at `http://localhost:8080`
 
-## How to Use the application:
+## How to Use the Application:
 
 
 ### Technical Details
@@ -110,7 +98,7 @@ The API will be available at `http://localhost:8080`
 ### Key Components
 
 1. **`src/db.py`**: Databse Operations
-    - Handles all CRUD operations with supabase
+    - Handles all CRUD operations with Supabase
 
 2. **`src/logic.py`**: Business logic 
     -Validation and processing
@@ -129,11 +117,11 @@ Extend the clipboard to allow not just text, but also images, videos, and other 
 
 2. ## Customizable Expiration Time:
 
-Allow users to set their preferred expiration time for each clip instead of a fixed duration.
+Allow users to set their preferred expiration time for each clip, rather than a fixed duration.
 
 3. ## App Versioning and Updates:
 
-Introduce a versioned app so that users can access the latest features while maintaining backward compatibility.
+Introduce a versioned app that allows users to access the latest features while maintaining backward compatibility.
 
 4. ## Enhanced User Experience:
 
